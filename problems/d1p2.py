@@ -1,12 +1,10 @@
-def solve():
+def solve(lines):
     numbers = []
 
-    # read in numbers from file
-    with open('inputs/d1p1.txt', 'r') as f:
-        for line in f.readlines():
-            if len(line) == 0:
-                continue
-            numbers.append(int(line.strip()))
+    for line in lines():
+        if len(line) == 0:
+            continue
+        numbers.append(int(line.strip()))
 
     sliding_sums = []
     window_size = 3
